@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #efedd6;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: steelblue;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateX(400%);
+          transform: translateX(400%);
+  -webkit-transition: 0.4s ease transform;
+  transition: 0.4s ease transform;
+  overflow: hidden;
+}
+
+.box:nth-of-type(even) {
+  -webkit-transform: translateX(-400%);
+          transform: translateX(-400%);
+}
+
+.box.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
+
+.box .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.box:nth-of-type(1) .image {
+  background-image: url(image-1.webp);
+}
+
+.box:nth-of-type(2) .image {
+  background-image: url(image-2.webp);
+}
+
+.box:nth-of-type(3) .image {
+  background-image: url(image-3.webp);
+}
+
+.box:nth-of-type(4) .image {
+  background-image: url(image-4.webp);
+}
+
+.box:nth-of-type(5) .image {
+  background-image: url(image-5.webp);
+}
+
+.box:nth-of-type(6) .image {
+  background-image: url(image-6.webp);
+}
+
+.box:nth-of-type(7) .image {
+  background-image: url(image-7.webp);
+}
+
+.box:nth-of-type(8) .image {
+  background-image: url(image-8.webp);
+}
+
+.box:nth-of-type(9) .image {
+  background-image: url(image-9.webp);
+}
+
+.box:nth-of-type(10) .image {
+  background-image: url(image-10.webp);
+}
+/*# sourceMappingURL=style.css.map */

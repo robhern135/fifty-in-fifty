@@ -1,0 +1,94 @@
+$blue: #3498db;
+$grey: #e0e0e0;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f7fb;
+  overflow: hidden;
+  font-family: "Muli", sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+  &::before {
+    content: "";
+    background-color: $grey;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+    left: 0;
+    height: 4px;
+    width: 100%;
+    transition: 0.4s linear width;
+  }
+}
+
+.progress {
+  background-color: $blue;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+  left: 0;
+  height: 4px;
+  width: 0%;
+  transition: 0.4s linear width;
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid $grey;
+  transition: 0.4s linear border;
+  &.active {
+    border-color: $blue;
+    color: $blue;
+    font-weight: bold;
+  }
+}
+.btn {
+  background-color: $blue;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+  &:active {
+    transform: scale(0.95);
+    transform-origin: center;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:disabled {
+    background-color: $grey;
+    cursor: not-allowed;
+  }
+}
