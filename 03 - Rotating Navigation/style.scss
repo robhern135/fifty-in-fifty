@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  background-color: #333;
+  color: #222;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: 0.5s linear transform;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+
+  &.show-nav {
+    transform: rotate(-20deg);
+    transition: 0.5s linear transform;
+    + nav li {
+      transform: translateX(0);
+      transition-delay: 0.3s;
+      transition: 0.5s ease-in transform;
+    }
+    .circle {
+      transform: rotate(-70deg);
+    }
+  }
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  .circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.5s linear;
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100px;
+      background: transparent;
+      border: 0;
+      font-size: 26px;
+      color: #fff;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
+      &#open {
+        left: 60%;
+      }
+      &#close {
+        top: 60%;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        transition: 0.5s linear transform;
+      }
+    }
+  }
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  ul {
+    list-style: none;
+    padding-left: 30px;
+    li {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 40px 0;
+      transform: translateX(-100%);
+      transition: 0.4s ease-in transform;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      i {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+      + li {
+        margin-left: 15px;
+        transform: translateX(-150%);
+        + li {
+          margin-left: 30px;
+          transform: translateX(-200%);
+        }
+      }
+    }
+  }
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+  h1 {
+    margin: 0;
+  }
+  small {
+    color: #555;
+    font-style: italic;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
