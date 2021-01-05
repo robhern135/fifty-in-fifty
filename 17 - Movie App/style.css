@@ -1,0 +1,156 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #22254b;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  z-index: 1;
+}
+
+header {
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #373b69;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #fff;
+}
+
+.search::-webkit-input-placeholder {
+  color: #7378c5;
+}
+
+.search:-ms-input-placeholder {
+  color: #7378c5;
+}
+
+.search::-ms-input-placeholder {
+  color: #7378c5;
+}
+
+.search::placeholder {
+  color: #7378c5;
+}
+
+.search:focus {
+  outline: none;
+  background-color: #22254b;
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  margin: 16px;
+  background-color: #373b69;
+  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie:hover .overview {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.movie-info {
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #eee;
+  padding: 10px;
+  letter-spacing: 0.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #373b69;
+  width: 100%;
+}
+
+.movie-info h3 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.movie-info span {
+  background-color: #22254b;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px 10px 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  max-height: 100%;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+}
+/*# sourceMappingURL=style.css.map */
